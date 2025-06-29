@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  background: linear-gradient(to bottom right, #6a00f4, #c500cc, #ff007f);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.todo-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.todo-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input[type="text"],
+.input-section input[type="date"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-section input::placeholder {
+  color: #777;
+}
+
+.input-section button {
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: background 0.3s;
+}
+
+.input-section button:hover {
+  background: #00cccc;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.task-list li {
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-left: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.task-list li.alert {
+  border-left: 5px solid red;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.task-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.task-left div {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.task-actions svg {
+  color: #ff4d4d;
+}
+
+.task-actions svg:hover {
+  color: #ff0000;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer button {
+  background: #00ffff;
+  color: #000;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.footer button:hover {
+  background: #00cccc;
+}
